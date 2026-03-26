@@ -17,13 +17,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     {
       "scrooloose/vim-slumlord",
       dependencies = { "aklt/plantuml-syntax" },
       ft = { "markdown", "plantuml", "puml" }, -- optional for file type auto-loading
     },
     { "L3MON4D3/LuaSnip", config = true },
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     { import = "plugins" },
     {
